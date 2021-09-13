@@ -40,6 +40,10 @@
   padding-bottom: .1rem;
 }
 
+.activeApp{
+background: var(--hover);
+}
+
 .activeApp img{
   border-bottom:2px solid #ccc;
 }
