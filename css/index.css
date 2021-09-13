@@ -2,6 +2,7 @@
 @import url("./notificationBar.css");
 @import url("./taskBar.css");
 @import url("./menu.css");
+@import url("./Apps.css/spotify.css");
 
 *,
 body {
@@ -52,4 +53,46 @@ body {
   display: flex;
   justify-content: center;
   -ms-grid-column-align: center;
+}
+
+/*===============App Window Control ================*/
+.windowSizeControl {
+  background: transparent;
+  width: 100%;
+  height: 3%;
+  overflow: hidden;
+}
+
+.windowResizeBtnContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 9%;
+  float: right;
+}
+
+.resizeBtn {
+  width: 100%;
+  height: 1.3rem;
+  overflow: hidden;
+  margin-top: 0.05rem;
+}
+
+.resizeBtn:hover {
+  background: var(--hover);
+}
+.resizeBtn:last-child:hover {
+  background: #f00;
+}
+
+.resizeBtn img {
+  height: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+/*======btn=======*/
+.closeWindow {
+  transform: scale(0) !important;
+  transition: transform .5s;
 }

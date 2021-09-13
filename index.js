@@ -62,7 +62,7 @@ windowsBtn.addEventListener("click", () => {
 
 //Mark Active===============
 const startMenuBtn = document.getElementsByClassName("startMenu-Btn");
-Array.prototype.forEach.call(startMenuBtn,(btn) => {
+Array.prototype.forEach.call(startMenuBtn, (btn) => {
   btn.addEventListener("click", () => {
     btn.classList.toggle("activeApp");
   });
@@ -83,3 +83,38 @@ Array.prototype.forEach.call(apps, (item) => {
     taskBar.prepend(app);
   });
 });
+
+//Close App ==========================
+function closeApp(app,activeIcon) {
+  const closeBtn = document.getElementsByClassName("closeApp");
+  Array.prototype.forEach.call(closeBtn, (btn) => {
+    btn.addEventListener("click", () => {
+      if (
+        btn.parentNode.parentNode.parentNode.id === app.id &&
+        app.classList.contains("closeWindow") === false
+      ) {
+        app.classList.add("closeWindow");
+		activeIcon.classList.remove("activeApp");
+      }
+    });
+  });
+}
+
+//Open App ==========================
+function openApp(clickedBtn, app) {
+  clickedBtn.addEventListener("click", () => {
+    app.classList.remove("closeWindow");
+  });
+}
+
+//Spotify
+const spotifyBtn = document.querySelectorAll("[data-spotify]");
+const spotify = document.getElementById("spotify");
+Array.prototype.forEach.call(spotifyBtn, (activeIcon) => {
+  closeApp(spotify, activeIcon);
+});
+Array.prototype.forEach.call(spotifyBtn, (clickedBtn) => {
+  openApp(clickedBtn, spotify);
+});
+
+
