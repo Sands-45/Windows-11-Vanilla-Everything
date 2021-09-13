@@ -1,0 +1,98 @@
+#notificationPanel {
+  background: var(--primary);
+  border-bottom: rgba(85, 85, 85, 0.11) 1px solid;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 95%;
+  width: 0rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width .2s ease-in-out;
+}
+
+.toggleNotification{
+  width: 20rem !important;
+}
+
+#detailedNotifications {
+  flex: 7;
+}
+#shortcutsContainer {
+  flex: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0.3rem;
+  padding: 0.3rem;
+  overflow: hidden;
+  transition: flex .2s;
+}
+
+.shortcutsContainer{
+  flex: 0 !important;
+  opacity: 0;
+}
+
+.shortcurts {
+  position: relative;
+  top: 0;
+  background:var(--hover);
+  height: 98%;
+  width: 100%;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: background .6s;
+  color: #fff;
+  padding: .3rem;
+  user-select: none;
+}
+
+.shortcurts:hover{
+background:#0b298b8c;
+}
+
+.shortcurts p{
+  position:absolute;
+  font-size: 65%;
+  bottom:0;
+  padding-bottom: .3rem;
+}
+
+.shortcurts img{
+  height:20px;
+}
+
+.activeS{
+  background:#0b298b8c;
+}
+
+#detailedNotifications{
+  position:relative;
+}
+
+#collapse{
+  color:#fff;
+  font-size: 70%;
+  position: absolute;
+  bottom: .5rem;
+  left: .3rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+#manageNotifications{
+  color:#fff;
+  font-size: 70%;
+  position: absolute;
+  top:.3rem;
+  right: .3rem;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity .1s ease-out;
+}
+
+.manageNotifications{
+  opacity: 0;
+  transition: opacity .1s ease-out;
+}

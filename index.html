@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/index.css" />
+	<script defer src="./index.js"></script>
+	<title>Windows 11 Clone @Sands</title>
+</head>
+
+<body>
+	<div id="container">
+		<!--============================TaskBar===================================================-->
+		<div id="taskbar">
+			<div id="startMenu">
+				<button id="settings" class="startMenu-Btn">
+					<img src="./images/settings.png" alt="settings">
+				</button>
+				<button id="outlook" class="startMenu-Btn">
+					<img src="./images/outlook.png" alt="outlook">
+				</button>
+				<button id="edge" class="startMenu-Btn">
+					<img src="./images/edge.png" alt="edge">
+				</button>
+				<button id="explore" class="startMenu-Btn">
+					<img src="./images/file.png" alt="file">
+				</button>
+				<button id="spotify" class="startMenu-Btn">
+					<img src="./images/spotify.png" alt="spotify">
+				</button>
+				<button id="sidePane" class="startMenu-Btn">
+					<img src="./images/Tab.png" alt="sidePane">
+				</button>
+				<button id="searchBtn" class="startMenu-Btn">
+					<img src="./images/search_icon.png" alt="search">
+				</button>
+				<button id="windowsBtn" class="startMenu-Btn">
+					<img src="./images/windows 11 icon.png" alt="windows">
+				</button>
+			</div>
+
+			<div id="taskbar-sideControls">
+				<button id="notificationToggle" class="sideControls-Btn">
+					<img src="./svg/notificationToggle.svg" alt="notificationToggle">
+				</button>
+				<button id="dateHolder" class="sideControls-Btn">
+					<span id="time">4:20 PM</span><br>
+					<span id="date">4:20 PM</span>
+				</button>
+				<button id="volume" class="sideControls-Btn">
+					<img src="./images/volume.png" alt="volume">
+				</button>
+				<button id="battery" class="sideControls-Btn">
+					<img src="./images/battery.png" alt="battery">
+				</button>
+				<button id="hiddenIcons" class="sideControls-Btn">
+					<img src="./images/icon-up.png" alt="up">
+				</button>
+			</div>
+		</div>
+		<!--=====================End of TaskBar======================-->
+		<!--=====================Notification Bar======================-->
+		<div id="notificationPanel">
+			<div id="detailedNotifications">
+				<div id="manageNotifications" class="manageNotifications">Manage Notifications</div>
+				<div id="collapse">Collapse</div>
+			</div>
+			<div id="shortcutsContainer" class="">
+				<div class="shortcurts">
+					<img src="./svg/location.svg" alt="location">
+					<p>Location</p>
+				</div>
+				<div class="shortcurts activeS">
+					<img src="./images/bluetooth.png" alt="bluetooth">
+					<p>Bluetooth</p>
+				</div>
+				<div id="nightlight" class="shortcurts">
+					<img src="./svg/nightLight.svg" alt="nightLight">
+					<p>Night Light</p>
+				</div>
+				<div class="shortcurts">
+					<img src="./svg/network.svg" alt="network">
+					<p>Network</p>
+				</div>
+				<div class="shortcurts">
+					<img src="./images/flight-mode.png" alt="flightMode">
+					<p>Offline Mode</p>
+				</div>
+				<div class="shortcurts">
+					<img src="./images/sharing.png" alt="sharing">
+					<p>Sharing</p>
+				</div>
+				<div class="shortcurts">
+					<img src="./svg/All-Settings.svg" alt="All_Settings">
+					<p>All Settings</p>
+				</div>
+				<div class="shortcurts  activeS">
+					<img src="./svg/security.svg" alt="security">
+					<p>Security</p>
+				</div>
+				<div class="shortcurts">
+					<img src="./images/vpn.png" alt="vpn">
+					<p>VPN</p>
+				</div>
+				<div class="shortcurts">
+					<img src="./images/hotspot.png" alt="hotspot">
+					<p>Hotspot</p>
+				</div>
+			</div>
+		</div>
+		<!--=====================Notification Bar======================-->
+		<!--=====================Menu======================-->
+		<div id="menu">
+			<input id="searchApps" type="text" placeholder=" Type here to search" />
+			<div id="menuControl">
+				<p>Pinned</p>
+				<button id="allAppsBtn">All Apps ≻</button>
+			</div>
+			<div id="appsContainer">
+				<button class="./images/ms-word.png apps activeApp">
+					<img src="./images/ms-word.png" alt="word"><br>
+					<small class="appName">Word</small>
+				</button>
+				<button class="./images/xbb.png apps">
+					<img src="./images/xbb.png" alt="xbox"><br>
+					<small>Xbox</small>
+				</button>
+				<button class="./images/forza4.jpg apps">
+					<img src="./images/forza4.jpg" alt="forza"><br>
+					<small>Forza-4</small>
+				</button>
+				<button class="./images/netflix.jpg apps">
+					<img src="./images/netflix.jpg" alt="netflix"><br>
+					<small>Netflix</small>
+				</button>
+				<button class="./images/mail.png apps">
+					<img src="./images/mail.png" alt="mail"><br>
+					<small>Mail</small>
+				</button>
+				<button class="./images/To-Do.png apps">
+					<img src="./images/To-Do.png" alt="toDo"><br>
+					<small>To do</small>
+				</button>
+				<button class="./images/twitter.png apps">
+					<img src="./images/twitter.png" alt="twitter"><br>
+					<small>Twitter</small>
+				</button>
+				<button class="./images/powerpoint.png apps">
+					<img src="./images/powerpoint.png" alt="powerpoint"><br>
+					<small>PowerPoint</small>
+				</button>
+				<button class="./images/spotify.png apps">
+					<img src="./images/spotify.png" alt="spotify"><br>
+					<small>Spotify</small>
+				</button>
+				<button class="./images/outlook.png apps">
+					<img src="./images/outlook.png" alt="outlook"><br>
+					<small>Outlook</small>
+				</button>
+				<button class="./images/terminal.png apps">
+					<img src="./images/terminal.png" alt="terminal"><br>
+					<small>Terminal</small>
+				</button>
+				<button class="./images/excel.png apps">
+					<img src="./images/excel.png" alt="excel"><br>
+					<small>Excel</small>
+				</button>
+				<button class="./images/minecraft.png apps">
+					<img src="./images/minecraft.png" alt="minecraft"><br>
+					<small>Minecraft</small>
+				</button>
+				<button class="./images/microsoft.png apps">
+					<img src="./images/microsoft.png" alt="store"><br>
+					<small>Store</small>
+				</button>
+				<button class="./images/vsCode.png apps">
+					<img src="./images/vsCode.png" alt="vsCode"><br>
+					<small>VS Code</small>
+				</button>
+				<button class="./images/github.png apps">
+					<img src="./images/github.png" alt="github"><br>
+					<small>Github</small>
+				</button>
+				<button class="./images/notepad.png apps">
+					<img src="./images/notepad.png" alt="notepad"><br>
+					<small>Notepad</small>
+				</button>
+				<button class="./images/calculator.png apps">
+					<img src="./images/calculator.png" alt="calculator"><br>
+					<small>Calculator</small>
+				</button>
+			</div>
+			<div id="menuControl">
+				<p>Recommended</p>
+				<button id="moreAppsBtn">More ≻</button>
+			</div>
+			<div id="recommendedApps">
+				<div>
+					<div class="rec-apps">
+						<div>
+							<img src="./images/halo.jfif" alt="halo">
+						</div>
+						<div>
+							<p>Halo : The Master Chief Collection</p>
+							<p>Recently Added</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="rec-apps">
+						<div>
+							<img src="./images/adobe-reader.jpg" alt="adobe">
+						</div>
+						<div>
+							<p>Adobe Acrobat Reader</p>
+							<p>12h ago</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="rec-apps">
+						<div>
+							<img src="./images/google_sheets.png" alt="google_sheets">
+						</div>
+						<div>
+							<p>Google Sheets : Sheet 1</p>
+							<p>17min ago</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="rec-apps">
+						<div>
+							<img src="./images/spotify.png" alt="spotify">
+						</div>
+						<div>
+							<p>Spotify : Drake Playlist</p>
+							<p>4h ago</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--============User===========-->
+			<div id="user">
+				<img src="./images/user.jfif" alt="">
+				<span id="userName">Sands 45</span>
+				<span id="switchUser"><img src="./svg/switcher.svg" alt="switcher"></span>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

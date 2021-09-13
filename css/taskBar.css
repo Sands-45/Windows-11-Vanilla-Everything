@@ -1,0 +1,82 @@
+#taskbar {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  position: fixed;
+  background: var(--primary);
+  filter: blur(0.02rem);
+  height: 5%;
+  width: 100%;
+  bottom: 0;
+  user-select: none;
+}
+
+#startMenu {
+  padding: 0.1%;
+}
+
+.startMenu-Btn {
+  float: right;
+  height: 95%;
+  width: 2.3rem;
+  margin: 0.1%;
+  background: transparent;
+  border: none;
+  border-radius: 0.1rem;
+  transition: background 0.8s;
+}
+
+.startMenu-Btn:hover,
+.sideControls-Btn:hover {
+  background: rgba(204, 204, 204, 0.178);
+}
+
+.startMenu-Btn img {
+  width: 75%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: .1rem;
+}
+
+.activeApp img{
+  border-bottom:2px solid #ccc;
+}
+
+.sideControls-Btn {
+  float: right;
+  height: 95%;
+  width: 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.1rem;
+}
+
+.sideControls-Btn img {
+  width: 70%;
+  height: 60%;
+  object-fit: scale-down;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#wifi i {
+  color: #fff;
+  transform: rotate(-45deg);
+}
+
+#dateHolder {
+  width: 5rem;
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+#notificationToggle {
+  width: 2.5rem;
+  color:#fff;
+  border-right:solid 1px #ccc;
+  margin-right: .8%;
+}
