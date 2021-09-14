@@ -27,6 +27,7 @@ Array.prototype.forEach.call(shortcuts, (shortcut) => {
     shortcut.classList.toggle("activeS");
   });
 });
+
 //Toggle notification Bar
 const manageNotifications = document.getElementById("manageNotifications");
 const notificationToggle = document.getElementById("notificationToggle");
@@ -74,7 +75,7 @@ Array.prototype.forEach.call(apps, (item) => {
       app.classList.add("startMenu-Btn", "activeApp");
       taskBar.prepend(app);
     }
-	item.classList.add("pinned");
+    item.classList.add("pinned");
   });
 });
 
@@ -114,5 +115,3 @@ Array.prototype.forEach.call(spotifyBtn, (clickedBtn) => {
   openApp(clickedBtn, spotify);
 });
 
-const doc = document.etAttribute("[da-hi]")
-console.log(doc);
