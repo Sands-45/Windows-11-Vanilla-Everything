@@ -15,48 +15,60 @@
 }
 /*=====logo======*/
 #spotify .logo {
-  height: 1.5rem;
   width: 100%;
-  padding: 0.1rem;
-  padding-left: 0.4rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
   position: relative;
+  color: #fff;
 }
 
 #spotify .logo img {
-  height: 1.3rem;
-  width: 1.3rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 #spotify .logo span {
   position: absolute;
-  left: 15%;
-  top: 17%;
-  font-size: 0.8rem;
-  color: #fff;
+  left: 30%;
+  top: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#spotify .logo small {
+  font-weight: lighter;
 }
 /*=====End of logo======*/
-#spotify .sideMenu ul {
-  margin-top: 2rem;
+#spotify ul {
   list-style: none;
-  padding: 0.1rem;
 }
 
-#spotify .sideMenu li img {
+#top_options {
+  margin-top: 2rem;
+  color: #abaaab;
+  padding: 0.5rem;
+}
+
+#top_options li img {
   height: 1.5rem;
   width: 1.5rem;
+  margin-left: 1.5rem;
 }
 
-#spotify .sideMenu li span {
+#top_options li {
+  padding-left: 2rem;
+}
+
+#top_options li span {
   position: absolute;
-  bottom: 0.3rem;
-  left: 4.5rem;
+  top: 20%;
+  left: 20%;
+  margin-left: 1rem;
 }
 
-#spotify .sideMenu li {
-  padding-left: 2.5rem;
-}
-
-#spotify .sideMenu ul .active {
-  border-left: #1fd660 solid 0.2rem;
+#top_options .active {
   color: #fff;
+  background: #292928;
+  border-radius: 0.3rem;
+  padding: 0.1rem;
 }
