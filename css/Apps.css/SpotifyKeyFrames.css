@@ -28,23 +28,18 @@
 @keyframes dislike {
   0%,
   100% {
-    margin-left: 1rem;
     transform: rotate(0deg);
   }
   20% {
-    margin-left: 0.8rem;
-    transform: rotate(-5deg);
+    transform: rotate(-15deg);
   }
   40% {
-    margin-left: 1.1rem;
-    transform: rotate(5deg);
+    transform: rotate(15deg);
   }
   60% {
-    margin-left: 0.8rem;
-    transform: rotate(-5deg);
+    transform: rotate(-15deg);
   }
   80% {
-    margin-left: 1.1rem;
-    transform: rotate(5deg);
+    transform: rotate(15deg);
   }
 }
