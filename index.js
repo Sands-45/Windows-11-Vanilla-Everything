@@ -116,11 +116,16 @@ Array.prototype.forEach.call(spotifyBtn, (clickedBtn) => {
 });
 //Like Current Playing
 const likeBtn = document.getElementById("likeSong");
+const likeAnimate = document.getElementById("likeAnimate");
 likeBtn.addEventListener("click", () => {
   let srC = likeBtn.getAttribute("src");
   if (srC === "./svg/heartIcon.svg") {
     likeBtn.src = "./svg/likeIcon.svg";
+    likeBtn.style.animationName = "none";
+    likeAnimate.style.animation = "like 0.5s ease-in";
+    likeBtn.style.animationFillMode = "forward";
   } else if (srC === "./svg/likeIcon.svg") {
     likeBtn.src = "./svg/heartIcon.svg";
+    likeBtn.style.animationName = "dislike";
   }
 });

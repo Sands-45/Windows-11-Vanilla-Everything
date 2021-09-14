@@ -1,3 +1,5 @@
+@import url("./SpotifyKeyFrames.css");
+
 #spotify {
   background: #181919;
   width: 100%;
@@ -118,7 +120,7 @@
   cursor: pointer;
 }
 
-#songCover{
+#songCover {
   display: flex;
   margin: auto;
   height: 2.5rem;
@@ -136,11 +138,24 @@
 }
 
 #likeSong {
-  padding-left: 1rem;
-  height: 2rem;
-  width: 2rem;
+  margin-left: 1rem;
+  margin-top: 0.8rem;
+  height: 1rem;
+  width: 1rem;
+  animation-name: dislike;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
 }
 
-#likeSong:hover{
-	stroke: red;
+#likeAnimate {
+  margin-left: 2rem;
+  border-radius: 50%;
+  background: #1cb955;
+  height: 2.1rem;
+  width: 2.1rem;
+  position: absolute;
+  top: 0.1rem;
+  left: -1.6rem;
+  transform: scale(0);
+  opacity: 0;
 }

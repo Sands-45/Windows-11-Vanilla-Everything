@@ -1,0 +1,52 @@
+
+@keyframes like {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.2;
+  }
+  30% {
+    transform: scale(0.5);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+
+@keyframes dislike {
+  0%,
+  100% {
+    margin-left: 0.1rem;
+    transform: rotate(0deg);
+  }
+  20% {
+    margin-left: 0rem;
+    transform: rotate(-5deg);
+  }
+  40% {
+    margin-left: 0.2rem;
+    transform: rotate(5deg);
+  }
+  60% {
+    margin-left: 0rem;
+    transform: rotate(-5deg);
+  }
+  80% {
+    margin-left: 0.2rem;
+    transform: rotate(5deg);
+  }
+}
