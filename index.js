@@ -121,11 +121,12 @@ likeBtn.addEventListener("click", () => {
   let srC = likeBtn.getAttribute("src");
   if (srC === "./svg/heartIcon.svg") {
     likeBtn.src = "./svg/likeIcon.svg";
-    likeBtn.style.animationName = "none";
+    likeBtn.style.animation = "none";
     likeAnimate.style.animation = "like 0.5s ease-in";
     likeBtn.style.animationFillMode = "forward";
   } else if (srC === "./svg/likeIcon.svg") {
     likeBtn.src = "./svg/heartIcon.svg";
-    likeBtn.style.animationName = "dislike";
+    likeBtn.style.animation = "dislike 0.3s ease-out";
+    likeAnimate.style.animation = "none";
   }
 });

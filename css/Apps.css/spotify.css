@@ -142,9 +142,6 @@
   margin-top: 0.8rem;
   height: 1rem;
   width: 1rem;
-  animation-name: dislike;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-out;
 }
 
 #likeAnimate {
