@@ -116,3 +116,11 @@ Array.prototype.forEach.call(spotifyBtn, (clickedBtn) => {
 });
 //Like Current Playing
 const likeBtn = document.getElementById("likeSong");
+likeBtn.addEventListener("click", () => {
+  let srC = likeBtn.getAttribute("src");
+  if (srC === "./svg/heartIcon.svg") {
+    likeBtn.src = "./svg/likeIcon.svg";
+  } else if (srC === "./svg/likeIcon.svg") {
+    likeBtn.src = "./svg/heartIcon.svg";
+  }
+});
