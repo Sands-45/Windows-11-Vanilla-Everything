@@ -6,6 +6,7 @@
   transform: scale(1);
   transition: transform 0.5s;
   overflow: hidden;
+  position: relative;
 }
 /*==========Side Nav========*/
 #spotify .sideMenu {
@@ -81,7 +82,7 @@
 }
 
 #playlists {
-  border-top:#666872 solid 1px;
+  border-top: #666872 solid 1px;
   margin: 1rem;
   margin-left: 2rem;
 }
@@ -94,5 +95,52 @@
 
 #playlists li:hover {
   color: #fff;
-  font-size: .5rem;
+  font-size: 0.5rem;
+}
+/*===End of Side Nav===*/
+/*CurrentlyPlaying*/
+#currentPlaying {
+  background: #232424;
+  border-top: 1px #232424 solid;
+  height: 8%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
+#currentPlayingSong {
+  display: flex;
+  margin: auto;
+  margin-left: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#songCover{
+  display: flex;
+  margin: auto;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+#currentPlayingSong #playingSongName {
+  padding-left: 1rem;
+}
+
+#currentPlayingSong #playingSongArtist {
+  padding-left: 1rem;
+  font-size: 0.6rem;
+  color: #ccc;
+}
+
+#likeSong {
+  padding-left: 1rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+#likeSong:hover{
+	stroke: red;
 }

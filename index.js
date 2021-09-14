@@ -104,7 +104,7 @@ function openApp(clickedBtn, app) {
     }
   });
 }
-
+//===================================Apps===================================
 //Spotify
 const spotifyBtn = document.querySelectorAll("[data-spotify]");
 const spotify = document.getElementById("spotify");
@@ -114,4 +114,5 @@ Array.prototype.forEach.call(spotifyBtn, (activeIcon) => {
 Array.prototype.forEach.call(spotifyBtn, (clickedBtn) => {
   openApp(clickedBtn, spotify);
 });
-
+//Like Current Playing
+const likeBtn = document.getElementById("likeSong");
