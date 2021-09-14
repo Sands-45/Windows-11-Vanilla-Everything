@@ -41,34 +41,58 @@
 /*=====End of logo======*/
 #spotify ul {
   list-style: none;
+  color: #abaaab;
 }
 
-#top_options {
-  margin-top: 2rem;
-  color: #abaaab;
+#options {
+  margin-top: 1rem;
   padding: 0.5rem;
 }
 
-#top_options li img {
+#options li img {
   height: 1.5rem;
   width: 1.5rem;
   margin-left: 1.5rem;
 }
 
-#top_options li {
+#options li {
   padding-left: 2rem;
+  border-radius: 0.3rem;
+  padding: 0.1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: color 0.5s;
 }
 
-#top_options li span {
+#options li:hover {
+  color: #fff;
+}
+
+#options li span {
   position: absolute;
   top: 20%;
   left: 20%;
   margin-left: 1rem;
 }
 
-#top_options .active {
+#options .active {
   color: #fff;
   background: #292928;
-  border-radius: 0.3rem;
-  padding: 0.1rem;
+}
+
+#playlists {
+  border-top:#666872 solid 1px;
+  margin: 1rem;
+  margin-left: 2rem;
+}
+
+#playlists li {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+#playlists li:hover {
+  color: #fff;
+  font-size: .5rem;
 }
