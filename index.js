@@ -125,19 +125,53 @@ function closeApp(app, activeIcon) {
   });
 }
 //Resize App ============================
-const desktopWindow = document.getElementById("desktopTabs");
 const resizeAppBtn = document.getElementsByClassName("resizeApp");
-const mainBody = document.getElementById("container");
-// Array.prototype.forEach.call(resizeAppBtn,(btn)=>{
-//   btn.addEventListener("mouseover",()=>{
-//     const openApp = btn.parentNode.parentNode.parentNode;
-//     openApp.style.width = "33%";
-//     openApp.style.transition = ".5s";
-//     openApp.style.height = "100%";
-//     desktopWindow.appendChild(mainBody.removeChild(openApp))
-//   })
-// })
+const resizeWindowOptions = document.getElementsByClassName(
+  "resizeWindowOptions"
+);
 
+Array.prototype.forEach.call(resizeAppBtn, (btn) => {
+  btn.addEventListener("mouseover", () => {
+    Array.prototype.forEach.call(resizeWindowOptions, (option) => {
+      if (option.parentNode == btn.parentNode.parentNode) {
+        option.classList.add("resizeWindowOptionsToggle");
+      }
+    });
+  });
+  Array.prototype.forEach.call(resizeWindowOptions, (option) => {
+    option.addEventListener("mouseleave", () => {
+      if (option.parentNode == btn.parentNode.parentNode) {
+        option.classList.remove("resizeWindowOptionsToggle");
+      }
+    });
+  });
+  btn.addEventListener("click", () => {
+    console.log(btn.parentNode.parentNode.parentNode.style.width);
+    const appToControl = btn.parentNode.parentNode.parentNode;
+    if(!appToControl.classList.contains("onclickResizeMin") && !appToControl.classList.contains("onclickResizeMax")){
+      appToControl.classList.add("onclickResizeMin");
+    }else if (appToControl.classList.contains("onclickResizeMin") && !appToControl.classList.contains("onclickResizeMax")){
+      appToControl.classList.remove("onclickResizeMin");
+      appToControl.classList.add("onclickResizeMax");
+    }else if(!appToControl.classList.contains("onclickResizeMin") && appToControl.classList.contains("onclickResizeMax")){
+      appToControl.classList.add("onclickResizeMin");
+      appToControl.classList.remove("onclickResizeMax");
+    }
+  });
+});
+
+const desktopWindow = document.getElementById("desktopTabs");
+const mainBody = document.getElementById("container");
+const firstHalf = document.getElementsByClassName("firstHalf");
+Array.prototype.forEach.call(firstHalf, (firstHalf) => {
+  firstHalf.addEventListener("click", () => {
+    const openApp = firstHalf.parentNode.parentNode.parentNode.parentNode;
+    openApp.style.width = "49%";
+    openApp.style.transition = "width .5s";
+    openApp.style.height = "100%";
+    desktopWindow.appendChild(mainBody.removeChild(openApp));
+  });
+});
 
 //Minimize App ==========================
 function minimizeApp(app) {
@@ -177,9 +211,9 @@ minimizeApp(spotify);
 Array.prototype.forEach.call(spotifyBtns, (clickedBtn) => {
   openApp(clickedBtn, spotify);
 });
-spotifyMenuBtn.addEventListener("click",()=>{
+spotifyMenuBtn.addEventListener("click", () => {
   spotifyTaskBtn.classList.add("activeApp");
-})
+});
 
 //Like Current Playing
 const likeBtn = document.getElementById("likeSong");
