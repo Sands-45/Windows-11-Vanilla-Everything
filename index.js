@@ -127,9 +127,14 @@ function closeApp(app, activeIcon) {
 //Resize App ============================
 const desktopWindow = document.getElementById("desktopTabs");
 const resizeAppBtn = document.getElementsByClassName("resizeApp");
+const mainBody = document.getElementById("container");
 Array.prototype.forEach.call(resizeAppBtn,(btn)=>{
   btn.addEventListener("mouseover",()=>{
-    alert("hi")
+    const openApp = btn.parentNode.parentNode.parentNode;
+    openApp.style.width = "33%";
+    openApp.style.transition = ".5s";
+    openApp.style.height = "100%";
+    desktopWindow.appendChild(mainBody.removeChild(openApp))
   })
 })
 
