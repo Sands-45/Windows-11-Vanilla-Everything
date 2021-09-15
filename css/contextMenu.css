@@ -43,6 +43,11 @@
   width: 1rem;
   object-fit: cover;
 }
+#contMenu li:nth-child(n + 1):nth-child(-n + 2) img {
+  height: 0.5rem;
+  float: right;
+  margin-top: 0.2rem;
+}
 /*=======Color=============*/
 #contMenu li:nth-child(n + 4):nth-child(-n + 5) span {
   color: #ccc;
