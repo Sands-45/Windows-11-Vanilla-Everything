@@ -97,9 +97,9 @@
 
 #playlists li:hover {
   color: #fff;
-  font-size: 0.5rem;
 }
 /*===End of Side Nav===*/
+
 /*CurrentlyPlaying*/
 #currentPlaying {
   background: #232424;
