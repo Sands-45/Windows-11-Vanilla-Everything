@@ -59,7 +59,7 @@
 /*Resize Window Tab Options*/
 
 .resizeWindowOptions {
-  background: rgba(39, 39, 39, 0.301);
+  background: #000;
   height: 8rem;
   width: 15rem;
   z-index: 1;

@@ -1,0 +1,19 @@
+#desktopApps{
+	width: 20%;
+	overflow: hidden;
+	padding:1rem;
+	color:#fff;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1rem;
+	position: absolute;
+}
+
+#desktopApps img{
+	height: rem;
+	width: 2rem;
+}
+
+#desktopApps p{
+	font-size: .6rem;
+}
