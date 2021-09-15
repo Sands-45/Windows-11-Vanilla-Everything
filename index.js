@@ -152,15 +152,21 @@ function openApp(clickedBtn, app) {
 }
 //===================================Apps===================================
 //Spotify
-const spotifyBtn = document.querySelectorAll("[data-spotify]");
+const spotifyBtns = document.querySelectorAll("[data-spotify]");
+const spotifyMenuBtn = document.querySelector(".spotify");
+const spotifyTaskBtn = document.querySelector(".spotifyTask");
 const spotify = document.getElementById("spotify");
-Array.prototype.forEach.call(spotifyBtn, (activeIcon) => {
+Array.prototype.forEach.call(spotifyBtns, (activeIcon) => {
   closeApp(spotify, activeIcon);
 });
 minimizeApp(spotify);
-Array.prototype.forEach.call(spotifyBtn, (clickedBtn) => {
+Array.prototype.forEach.call(spotifyBtns, (clickedBtn) => {
   openApp(clickedBtn, spotify);
 });
+spotifyMenuBtn.addEventListener("click",()=>{
+  spotifyTaskBtn.classList.add("activeApp");
+})
+
 //Like Current Playing
 const likeBtn = document.getElementById("likeSong");
 const likeAnimate = document.getElementById("likeAnimate");
