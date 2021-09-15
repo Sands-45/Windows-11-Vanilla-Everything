@@ -151,7 +151,9 @@
 .firstHalfApp {
   width: 49% !important;
   height: 95% !important;
-  transition: width 0.5s, height 0.5s;
+  position: absolute !important;
+  left: 0;
+  transition: width 0.5s, height 0.5s, position 0.5s, left 0.5s;
 }
 
 .secondHalfApp {
@@ -159,13 +161,15 @@
   height: 95% !important;
   position: absolute !important;
   right: 0;
-  transition: width 0.5s, height 0.5s;
+  transition: width 0.5s, height 0.5s, position 0.5s, right 0.5s;
 }
 
 .twoThirdsApp {
   width: 67% !important;
   height: 95% !important;
-  transition: width 0.5s, height 0.5s;
+  position: absolute !important;
+  left: 0;
+  transition: width 0.5s, height 0.5s, position 0.5s, left 0.5s;
 }
 
 .oneThirdsApp {
@@ -173,5 +177,5 @@
   height: 95% !important;
   position: absolute !important;
   right: 0;
-  transition: width 0.5s, height 0.5s;
+  transition: width 0.5s, height 0.5s, position 0.5s, right 0.5s;
 }
