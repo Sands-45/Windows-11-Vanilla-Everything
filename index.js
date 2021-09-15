@@ -152,7 +152,12 @@ Array.prototype.forEach.call(resizeAppBtn, (btn) => {
       !appToControl.classList.contains("onclickResizeMin") &&
       !appToControl.classList.contains("onclickResizeMax")
     ) {
-      appToControl.classList.remove("firstHalfApp", "secondHalfApp");
+      appToControl.classList.remove(
+        "firstHalfApp",
+        "secondHalfApp",
+        "twoThirdsApp",
+        "oneThirdsApp"
+      );
       appToControl.classList.add("onclickResizeMin");
     } else if (
       appToControl.classList.contains("onclickResizeMin") &&
@@ -161,7 +166,9 @@ Array.prototype.forEach.call(resizeAppBtn, (btn) => {
       appToControl.classList.remove(
         "firstHalfApp",
         "onclickResizeMin",
-        "secondHalfApp"
+        "secondHalfApp",
+        "twoThirdsApp",
+        "oneThirdsApp"
       );
       appToControl.classList.add("onclickResizeMax");
     } else if (
@@ -172,7 +179,9 @@ Array.prototype.forEach.call(resizeAppBtn, (btn) => {
       appToControl.classList.remove(
         "onclickResizeMax",
         "firstHalfApp",
-        "secondHalfApp"
+        "secondHalfApp",
+        "twoThirdsApp",
+        "oneThirdsApp"
       );
     }
   });
@@ -182,13 +191,17 @@ const desktopWindow = document.getElementById("desktopTabs");
 const mainBody = document.getElementById("container");
 const firstHalf = document.getElementsByClassName("firstHalf");
 const secondHalf = document.getElementsByClassName("secondHalf");
+const twoThirds = document.getElementsByClassName("twoThirds");
+const oneThirds = document.getElementsByClassName("oneThirds");
 Array.prototype.forEach.call(firstHalf, (firstHalf) => {
   firstHalf.addEventListener("click", () => {
     const openApp = firstHalf.parentNode.parentNode.parentNode.parentNode;
     openApp.classList.remove(
       "onclickResizeMax",
       "onclickResizeMin",
-      "secondHalfApp"
+      "secondHalfApp",
+      "twoThirdsApp",
+      "oneThirdsApp"
     );
     openApp.classList.add("firstHalfApp");
     desktopWindow.appendChild(mainBody.removeChild(openApp));
@@ -201,9 +214,41 @@ Array.prototype.forEach.call(secondHalf, (secondHalf) => {
     openApp.classList.remove(
       "onclickResizeMax",
       "onclickResizeMin",
-      "firstHalfApp"
+      "firstHalfApp",
+      "twoThirdsApp",
+      "oneThirdsApp"
     );
     openApp.classList.add("secondHalfApp");
+    desktopWindow.appendChild(mainBody.removeChild(openApp));
+  });
+});
+
+Array.prototype.forEach.call(twoThirds, (twoThirds) => {
+  twoThirds.addEventListener("click", () => {
+    const openApp = twoThirds.parentNode.parentNode.parentNode.parentNode;
+    openApp.classList.remove(
+      "onclickResizeMax",
+      "onclickResizeMin",
+      "firstHalfApp",
+      "secondHalfApp",
+      "oneThirdsApp"
+    );
+    openApp.classList.add("twoThirdsApp");
+    desktopWindow.appendChild(mainBody.removeChild(openApp));
+  });
+});
+
+Array.prototype.forEach.call(oneThirds, (oneThirds) => {
+  oneThirds.addEventListener("click", () => {
+    const openApp = oneThirds.parentNode.parentNode.parentNode.parentNode;
+    openApp.classList.remove(
+      "onclickResizeMax",
+      "onclickResizeMin",
+      "firstHalfApp",
+      "secondHalfApp",
+      "twoThirdsApp"
+    );
+    openApp.classList.add("oneThirdsApp");
     desktopWindow.appendChild(mainBody.removeChild(openApp));
   });
 });

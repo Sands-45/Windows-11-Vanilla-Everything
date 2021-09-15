@@ -21,12 +21,12 @@
 .windowResizeBtnContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 9%;
+  width: 6rem;
   float: right;
 }
 
 .windowSizeControlBtn {
-  width: 100%;
+  width: 2rem;
   height: 1.3rem;
   overflow: hidden;
   margin-top: 0.05rem;
@@ -61,7 +61,7 @@
 .resizeWindowOptions {
   background: rgba(39, 39, 39, 0.301);
   height: 8rem;
-  width: 20%;
+  width: 15rem;
   z-index: 1;
   position: absolute;
   right: 0.9rem;
@@ -156,6 +156,20 @@
 
 .secondHalfApp {
   width: 49% !important;
+  height: 95% !important;
+  position: absolute !important;
+  right: 0;
+  transition: width 0.5s, height 0.5s;
+}
+
+.twoThirdsApp {
+  width: 67% !important;
+  height: 95% !important;
+  transition: width 0.5s, height 0.5s;
+}
+
+.oneThirdsApp {
+  width: 32% !important;
   height: 95% !important;
   position: absolute !important;
   right: 0;
