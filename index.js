@@ -124,6 +124,15 @@ function closeApp(app, activeIcon) {
     });
   });
 }
+//Resize App ============================
+const desktopWindow = document.getElementById("desktopTabs");
+const resizeAppBtn = document.getElementsByClassName("resizeApp");
+Array.prototype.forEach.call(resizeAppBtn,(btn)=>{
+  btn.addEventListener("mouseover",()=>{
+    alert("hi")
+  })
+})
+
 
 //Minimize App ==========================
 function minimizeApp(app) {

@@ -73,21 +73,21 @@ body {
   float: right;
 }
 
-.resizeBtn {
+.windowSizeControlBtn {
   width: 100%;
   height: 1.3rem;
   overflow: hidden;
   margin-top: 0.05rem;
 }
 
-.resizeBtn:hover {
+.windowSizeControlBtn:hover {
   background: var(--hover);
 }
 .resizeBtn:last-child:hover {
   background: #f00;
 }
 
-.resizeBtn img {
+.windowSizeControlBtn img {
   height: 1.2rem;
   display: flex;
   justify-content: center;

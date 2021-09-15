@@ -1,0 +1,9 @@
+#desktopTabs{
+	background: cornflowerblue;
+	width: 100%;
+	height: 95%;
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
