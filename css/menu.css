@@ -66,6 +66,7 @@
 #menuControl {
   display: flex;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: 3rem;
   margin-right: 3rem;
   color: #fff;
@@ -83,6 +84,15 @@
   color: #fff;
   font-size: 0.7rem;
   cursor: pointer;
+  box-shadow: 3px 3px 2px rgba(0, 0, 1, 0.589);
+}
+
+#allAppsBtn img,
+#moreAppsBtn img {
+  position: relative;
+  height: 0.8rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
 }
 
 #searchApps {
@@ -149,7 +159,7 @@
   width: 26rem;
   margin: 0 auto;
   margin-top: 1rem;
-  grid-gap:1rem;
+  grid-gap: 1rem;
 }
 
 .rec-apps {
