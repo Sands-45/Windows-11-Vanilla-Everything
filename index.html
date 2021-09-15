@@ -13,6 +13,21 @@
 
 <body>
 	<div id="container">
+		<div id="contMenu">
+			<ul>
+				<li><span>View</span></li>
+				<li><span>Sort by</span></li>
+				<li><span>Refresh</span></li>
+				<li><span>Paste</span></li>
+				<li><span>Paste Shortcut</span></li>
+				<li><span>Undo Delete</span></li>
+				<li><span>Next destop background</span></li>
+				<li><img src="./images/terminal.png" alt="terminal"><span>Open in Windows Terminal</span></li>
+				<li><span>New</span></li>
+				<li><img src="./images/personalizeIcon.png" alt="personalize"><span>Personalize</span></li>
+				<li><img src="./images/aboutIcon.png" alt="about"><span>About</span></li>
+			</ul>
+		</div>
 		<!--============================TaskBar===================================================-->
 		<div id="taskbar">
 			<div id="startMenu">
@@ -251,7 +266,7 @@
 			</div>
 		</div>
 		<!--====================Apps===================-->
-		<div id="spotify" class="">
+		<div id="spotify" class="closeWindow">
 			<!--==========windowControls===========-->
 			<div class="windowSizeControl">
 				<div class="windowResizeBtnContainer">
@@ -308,7 +323,9 @@
 					</div>
 					<img id="addToPlayList" src="./svg/pipIcon.svg" alt="">
 				</div>
-				<div id="playingControls"></div>
+				<div id="playingControls">
+					<audio src=""></audio>
+				</div>
 				<div id="playingExtraOptions"></div>
 			</div>
 		</div>

@@ -1,3 +1,21 @@
+//ContextMenu==============
+document.body.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  let x = e.clientX + "px";
+  let y = e.clientY + "px";
+  const contmenu = document.getElementById("contMenu");
+  contmenu.style.display = "block";
+  contmenu.style.left = x;
+  contmenu.style.top = y;
+});
+
+document.body.addEventListener("click", (e) => {
+  const contmenu = document.getElementById("contMenu");
+  if (e.target !== contmenu && !contmenu.contains(e.target)) {
+    document.getElementById("contMenu").style.display = "none";
+  }
+});
+
 //==========TaskBar Time===========
 const date = document.getElementById("date");
 date.innerHTML = `${
@@ -61,6 +79,18 @@ windowsBtn.addEventListener("click", () => {
   windowsBtn.classList.toggle("activeApp");
 });
 
+document.body.addEventListener("click", (e) => {
+  if (
+    e.target !== menu &&
+    !menu.contains(e.target) &&
+    !windowsBtn.contains(e.target)
+  ) {
+    menu.classList.remove("menu");
+    user.classList.remove("user");
+    windowsBtn.classList.remove("activeApp");
+  }
+});
+
 //Pin Active App to Taskbar
 const taskBar = document.getElementById("startMenu");
 const apps = document.getElementsByClassName("apps");
@@ -95,10 +125,26 @@ function closeApp(app, activeIcon) {
   });
 }
 
+//Minimize App ==========================
+function minimizeApp(app) {
+  const minimizeBtn = document.getElementsByClassName("minimizeApp");
+  Array.prototype.forEach.call(minimizeBtn, (btn) => {
+    btn.addEventListener("click", () => {
+      if (
+        btn.parentNode.parentNode.parentNode.id === app.id &&
+        app.classList.contains("minimizeWindow") === false
+      ) {
+        app.classList.add("minimizeWindow");
+      }
+    });
+  });
+}
+
 //Open App ==========================
 function openApp(clickedBtn, app) {
   clickedBtn.addEventListener("click", () => {
     app.classList.remove("closeWindow");
+    app.classList.remove("minimizeWindow");
     if (clickedBtn.classList.contains("startMenu-Btn") === true) {
       clickedBtn.classList.add("activeApp");
     }
@@ -111,6 +157,7 @@ const spotify = document.getElementById("spotify");
 Array.prototype.forEach.call(spotifyBtn, (activeIcon) => {
   closeApp(spotify, activeIcon);
 });
+minimizeApp(spotify);
 Array.prototype.forEach.call(spotifyBtn, (clickedBtn) => {
   openApp(clickedBtn, spotify);
 });
