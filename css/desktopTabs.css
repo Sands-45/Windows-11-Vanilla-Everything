@@ -1,12 +1,12 @@
-#desktopTabs{
-	background: transparent;
-	width: 100%;
-	height: 95%;
-	position: absolute;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	padding:.1%;
+#desktopTabs {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.1%;
 }
 
 /*===============App Window Control ================*/
@@ -72,11 +72,11 @@
   padding: 0.5rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 0.5rem;
-  transition: transform .5s;
+  transition: transform 0.5s;
   transform: scale(0);
 }
 
-.resizeWindowOptionsToggle{
+.resizeWindowOptionsToggle {
   transform: scale(1);
 }
 
@@ -104,7 +104,7 @@
   grid-gap: 0.2rem;
 }
 .half {
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   overflow: hidden;
 }
 
@@ -134,16 +134,30 @@
   cursor: pointer;
 }
 /*===============================================*/
-.onclickResizeMin{
+.onclickResizeMin {
   width: 70% !important;
   height: 80% !important;
-  margin:0 auto;
+  margin: 0 auto;
   justify-content: center;
-  margin-top:5%;
-  transition: width .5s, height .5s;
+  margin-top: 5%;
+  transition: width 0.5s, height 0.5s;
 }
-.onclickResizeMax{
+.onclickResizeMax {
   width: 100% !important;
   height: 95% !important;
-  transition: width .5s, height .5s;
+  transition: width 0.5s, height 0.5s;
+}
+
+.firstHalfApp {
+  width: 49% !important;
+  height: 95% !important;
+  transition: width 0.5s, height 0.5s;
+}
+
+.secondHalfApp {
+  width: 49% !important;
+  height: 95% !important;
+  position: absolute !important;
+  right: 0;
+  transition: width 0.5s, height 0.5s;
 }

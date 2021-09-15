@@ -148,14 +148,32 @@ Array.prototype.forEach.call(resizeAppBtn, (btn) => {
   btn.addEventListener("click", () => {
     console.log(btn.parentNode.parentNode.parentNode.style.width);
     const appToControl = btn.parentNode.parentNode.parentNode;
-    if(!appToControl.classList.contains("onclickResizeMin") && !appToControl.classList.contains("onclickResizeMax")){
+    if (
+      !appToControl.classList.contains("onclickResizeMin") &&
+      !appToControl.classList.contains("onclickResizeMax")
+    ) {
+      appToControl.classList.remove("firstHalfApp", "secondHalfApp");
       appToControl.classList.add("onclickResizeMin");
-    }else if (appToControl.classList.contains("onclickResizeMin") && !appToControl.classList.contains("onclickResizeMax")){
-      appToControl.classList.remove("onclickResizeMin");
+    } else if (
+      appToControl.classList.contains("onclickResizeMin") &&
+      !appToControl.classList.contains("onclickResizeMax")
+    ) {
+      appToControl.classList.remove(
+        "firstHalfApp",
+        "onclickResizeMin",
+        "secondHalfApp"
+      );
       appToControl.classList.add("onclickResizeMax");
-    }else if(!appToControl.classList.contains("onclickResizeMin") && appToControl.classList.contains("onclickResizeMax")){
+    } else if (
+      !appToControl.classList.contains("onclickResizeMin") &&
+      appToControl.classList.contains("onclickResizeMax")
+    ) {
       appToControl.classList.add("onclickResizeMin");
-      appToControl.classList.remove("onclickResizeMax");
+      appToControl.classList.remove(
+        "onclickResizeMax",
+        "firstHalfApp",
+        "secondHalfApp"
+      );
     }
   });
 });
@@ -163,12 +181,29 @@ Array.prototype.forEach.call(resizeAppBtn, (btn) => {
 const desktopWindow = document.getElementById("desktopTabs");
 const mainBody = document.getElementById("container");
 const firstHalf = document.getElementsByClassName("firstHalf");
+const secondHalf = document.getElementsByClassName("secondHalf");
 Array.prototype.forEach.call(firstHalf, (firstHalf) => {
   firstHalf.addEventListener("click", () => {
     const openApp = firstHalf.parentNode.parentNode.parentNode.parentNode;
-    openApp.style.width = "49%";
-    openApp.style.transition = "width .5s";
-    openApp.style.height = "100%";
+    openApp.classList.remove(
+      "onclickResizeMax",
+      "onclickResizeMin",
+      "secondHalfApp"
+    );
+    openApp.classList.add("firstHalfApp");
+    desktopWindow.appendChild(mainBody.removeChild(openApp));
+  });
+});
+
+Array.prototype.forEach.call(secondHalf, (secondHalf) => {
+  secondHalf.addEventListener("click", () => {
+    const openApp = secondHalf.parentNode.parentNode.parentNode.parentNode;
+    openApp.classList.remove(
+      "onclickResizeMax",
+      "onclickResizeMin",
+      "firstHalfApp"
+    );
+    openApp.classList.add("secondHalfApp");
     desktopWindow.appendChild(mainBody.removeChild(openApp));
   });
 });
