@@ -1,5 +1,6 @@
 #menu {
   background: var(--primary);
+  backdrop-filter: blur(.1rem);
   height: 0;
   width: 32rem;
   border-radius: 0.5rem;

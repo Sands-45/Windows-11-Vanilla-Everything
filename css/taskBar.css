@@ -3,7 +3,7 @@
   grid-template-columns: 60% 40%;
   position: fixed;
   background: var(--primary);
-  filter: blur(0.02rem);
+  backdrop-filter: blur(.2rem);
   height: 5%;
   width: 100%;
   bottom: 0;
